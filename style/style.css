@@ -26,6 +26,27 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  #register{
+    text-decoration: none;
+    text-align: center;
+  }
+
+  p{
+    color: whitesmoke;
+  }
+
+  .botonIngresar{
+    text-decoration: none;
+  }
+
+  .botonIngresar:hover{
+    color: white;
+  }
+
+  #register:hover{
+    text-decoration: underline;
+  }
   
   .button{
     border-radius: 10px;
@@ -206,11 +227,10 @@
 
 .glow-on-hover:before {
     content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background: linear-gradient(45deg, #ffffff, #ffffff);
     position: absolute;
     top: -2px;
     left:-2px;
-    
     z-index: -1;
     filter: blur(5px);
     width: calc(100% + 4px);
@@ -231,6 +251,7 @@
 
 .glow-on-hover:hover:before {
     opacity: 1;
+    color: white;
 }
 
 .glow-on-hover:after {
@@ -243,10 +264,4 @@
     left: 0;
     top: 0;
     border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
 }
