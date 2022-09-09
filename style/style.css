@@ -59,12 +59,12 @@
     font-size: 1.2rem;
   }
 
-  button:active{
+  .button:active{
     position: relative;
     top: 2px;
   }
 
-  button:hover{
+  .button:hover{
     background-color: #CAC4CE;
     color: #242038;
   }
@@ -265,3 +265,45 @@
     top: 0;
     border-radius: 10px;
 }
+
+
+/* CSS DE TABLA ADMIN */
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #242038;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #242038;
+}
+
+.content-table tbody tr:hover {
+  font-weight: bold;
+  color: #725AC1;
+}
+/* FIN DE CSS TABLA ADMIN */
