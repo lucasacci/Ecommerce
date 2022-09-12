@@ -339,11 +339,15 @@
   
   }
 
+   /* Fin pagina error 404*/
+
+
+
   /*Pagina acerca nosotros*/
   
 
   .lema{
-    color: #000;
+    color: #242038;
     font-weight: bold;
     font-size: 30px;
     font-family: 'Combo', cursive;
@@ -352,3 +356,12 @@
     .articuloLema{
     text-align: center;
     }
+
+
+.colorNombres{
+  color: #242038;
+  font-weight: bold;
+
+}
+
+    /* Fin pagina acerca nosotros*/
