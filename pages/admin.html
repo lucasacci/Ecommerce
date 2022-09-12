@@ -1,164 +1,405 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Esta es la pagina de administracion disponible solo para administradores">
-    <meta name="keywords" content="Productos, Catalogo, Agregar, Borrar, Editar">
-    <meta name="author" content="Leah Thomsen, Julieta Valdez, Luciano Casachi, Santiago Figueroa">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Esta es la pagina de administracion disponible solo para administradores"
+    />
+    <meta
+      name="keywords"
+      content="Productos, Catalogo, Agregar, Borrar, Editar"
+    />
+    <meta
+      name="author"
+      content="Leah Thomsen, Julieta Valdez, Luciano Casachi, Santiago Figueroa"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
     <script
       src="https://kit.fontawesome.com/5a53958b9a.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="shortcut icon" href="../img/default-light.svg"> 
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="shortcut icon" href="../img/default-light.svg" />
+    <script src="https://kit.fontawesome.com/263ce776d3.js" crossorigin="anonymous"></script>
     <title>Xtore</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark color padding">
-            <div class="container-fluid ">
-                <a class="navbar-brand" href="../index.html"><img src="../img/default-light.svg" width="100px" id="img" alt="logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <div class="mx-5">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center my-2">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="admin.html">Administracion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Acerca de</a>
-                        </li>
-                        </li>
-                        </ul>
-                    </div>
-                    <div class="responsive">
-                        <button class="glow-on-hover" type="button" data-bs-toggle="modal" data-bs-target="#modalMedialuna">Login</button>
-                    </div>
-                </div>
+      <nav class="navbar navbar-expand-lg navbar-dark color padding">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"
+            ><img
+              src="../img/default-light.svg"
+              width="100px"
+              id="img"
+              alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <div class="mx-5">
+              <ul
+                class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center my-2"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="../index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="admin.html"
+                    >Administracion</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Acerca de</a>
+                </li>
+              </ul>
             </div>
-        </nav>
-
-        <!-- modal -->
-        <div class="modal fade" id="modalMedialuna" tabindex="-1" aria-labelledby="modalMedialunaLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content ">
-                    <div class="modal-header bg-dark">
-                        <h3 class="modal-title text-primary" id="modalMedialunaLabel"> <strong>LOGIN</strong> </h3>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body bg-dark">
-                        <p class="fs-4 text-center text-light">Iniciar sesion</p> 
-                        <form>
-                            <div class="mb-3">
-                                <label for="usuario" class="form-label text-light">Usuario</label>
-                                <input type="text" id="nombreApellido" placeholder="Ingrese su usuario" class="form-control bg-secondary" minlength="3" maxlength="20" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label text-light">Contraseña</label>
-                                <input type="password" id="#" placeholder="Ingrese su contraseña" class="form-control bg-secondary text-light" minlength="3" maxlength="20" required>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <p>No tenes una cuenta? <a href="#">Registrate ya</a></p>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer bg-dark">
-                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-outline-primary ">
-                            <a href="error.html" type="button" class="botonIngresar" >Ingresar</a>
-                        </button>
-                    </div>
-                </div>
+            <div class="responsive">
+              <button
+                class="glow-on-hover"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modalMedialuna"
+              >
+                Login
+              </button>
             </div>
+          </div>
         </div>
+      </nav>
+
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="modalMedialuna"
+        tabindex="-1"
+        aria-labelledby="modalMedialunaLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-dark">
+              <h3 class="modal-title text-primary" id="modalMedialunaLabel">
+                <strong>LOGIN</strong>
+              </h3>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body bg-dark">
+              <p class="fs-4 text-center text-light">Iniciar sesion</p>
+              <form>
+                <div class="mb-3">
+                  <label for="usuario" class="form-label text-light"
+                    >Usuario</label
+                  >
+                  <input
+                    type="text"
+                    id="nombreApellido"
+                    placeholder="Ingrese su usuario"
+                    class="form-control bg-secondary"
+                    minlength="3"
+                    maxlength="20"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label text-light"
+                    >Contraseña</label
+                  >
+                  <input
+                    type="password"
+                    id="#"
+                    placeholder="Ingrese su contraseña"
+                    class="form-control bg-secondary text-light"
+                    minlength="3"
+                    maxlength="20"
+                    required
+                  />
+                </div>
+                <div class="d-flex justify-content-center">
+                  <p>No tenes una cuenta? <a href="#">Registrate ya</a></p>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer bg-dark">
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button type="submit" class="btn btn-outline-primary">
+                <a href="error.html" type="button" class="botonIngresar"
+                  >Ingresar</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
-    <main>
-
-    </main>
-    <footer class="footer">
-        <div class="footer__addr">
-            <a href="../index.html"><img src="../img/default-monochrome.svg" alt="" width="200px"></a>
-            <div>
-              
-            </div>
-            <h2>Contacto</h2>
-              <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram text-dark fs-3"></i></a>
-              <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter text-dark fs-3"></i></a>
-              <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook text-dark fs-3"></i></a>
+    <main class="container">
+      <div>
+        <h1 class="text-center display-4">ADMINISTRACIÓN</h1>
+        <hr />
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <button class="btn btn-outline-primary my-2" id="btnCrearProducto">
+            Añadir producto
+            <i class="fa-solid fa-circle-plus fa-beat" style="--fa-animation-duration: 5s;"></i>
+          </button>
         </div>
-        
-          <ul class="footer__nav">
-            <li class="nav__item">
-              <h2 class="nav__title">Rewards</h2>
-        
-              <ul class="nav__ul">
-                <li>
-                  <a href="#">Join Now</a>
-                </li>
-        
-                <li>
-                  <a href="#">Learn More</a>
-                </li>
-        
-                <li>
-                  <a href="#">Manage Account</a>
-                </li>
-              </ul>
+        <div class="col-8">
+          <h2 class="display-6">Lista de productos</h2>
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Descripción</th>
+                <th>Cantidad en Stock</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody  id="tablaProductos">
+            </tbody>
+          </table>
+        </div>
+        <div class="col-2">
+          <h2 class="display-6">Usuarios</h2>
+        </div>
+      </div>
+    </main>
+    <!-- Modal para administrar series -->
+    <div
+      class="modal fade"
+      id="modalProducto"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Administrar Producto
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formProducto">
+              <div class="mb-3">
+                <label for="codigo">Codigo</label>
+                <input
+                  id="codigo"
+                  type="text"
+                  class="form-control"
+                  placeholder="123"
+                  maxlength="5"
+                  minlength="1"
+                  disabled
+                />
+              </div>
+              <div class="mb-3">
+                <label for="nombre">Nombre</label>
+                <input
+                  id="nombre"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: Iphone 11"
+                  maxlength="60"
+                  minlength="2"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="descripcion">Descripcion</label>
+                <textarea
+                  id="descripcion"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Ej: Lorem ipsum dolor sit amet."
+                  maxlength="200"
+                  minlength="2"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="imagen">Imagen</label>
+                <input
+                  id="imagen"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html"
+                  maxlength="120"
+                  minlength="2"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="precio">Precio</label>
+                <input
+                  id="precio"
+                  type="number"
+                  class="form-control"
+                  placeholder="500"
+                  maxlength="5"
+                  minlength="1"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="cantidad">Cantidad</label>
+                <input
+                  id="cantidad"
+                  type="number"
+                  class="form-control"
+                  placeholder="30"
+                  maxlength="5"
+                  minlength="1"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="categoria">Categoria</label>
+                <input
+                  id="categoria"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: Robotech"
+                  maxlength="60"
+                  minlength="2"
+                />
+              </div>
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__addr">
+        <a href="../index.html"
+          ><img src="../img/default-monochrome.svg" alt="" width="200px"
+        /></a>
+        <div></div>
+        <h2>Contacto</h2>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fa-brands fa-instagram text-dark fs-3"></i
+        ></a>
+        <a href="https://www.twitter.com/" target="_blank"
+          ><i class="fa-brands fa-twitter text-dark fs-3"></i
+        ></a>
+        <a href="https://www.facebook.com/" target="_blank"
+          ><i class="fa-brands fa-facebook text-dark fs-3"></i
+        ></a>
+      </div>
+
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Rewards</h2>
+
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Join Now</a>
             </li>
-        
-            <li class="nav__item">
-              <h2 class="nav__title">News & Info</h2>
-        
-              <ul class="nav__ul">
-                <li>
-                  <a href="#">Press Releases</a>
-                </li>
-        
-                <li>
-                  <a href="#">About Our Products</a>
-                </li>
-        
-                <li>
-                  <a href="#">Product Support</a>
-                </li>
-        
-                <li>
-                  <a href="#">Product Manuals</a>
-                </li>
-              </ul>
+
+            <li>
+              <a href="#">Learn More</a>
             </li>
-        
-            <li class="nav__item">
-              <h2 class="nav__title">Support</h2>
-        
-              <ul class="nav__ul">
-                <li>
-                  <a href="#">FAQ</a>
-                </li>
-        
-                <li>
-                  <a href="#">Help Desk</a>
-                </li>
-        
-                <li>
-                  <a href="#">Forums</a>
-                </li>
-              </ul>
+
+            <li>
+              <a href="#">Manage Account</a>
             </li>
           </ul>
-        
-          <div class="legal">
-            <p>&copy; 2022 Todos los derechos reservados.</p>
-          </div>
+        </li>
+
+        <li class="nav__item">
+          <h2 class="nav__title">News & Info</h2>
+
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Press Releases</a>
+            </li>
+
+            <li>
+              <a href="#">About Our Products</a>
+            </li>
+
+            <li>
+              <a href="#">Product Support</a>
+            </li>
+
+            <li>
+              <a href="#">Product Manuals</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <h2 class="nav__title">Support</h2>
+
+          <ul class="nav__ul">
+            <li>
+              <a href="#">FAQ</a>
+            </li>
+
+            <li>
+              <a href="#">Help Desk</a>
+            </li>
+
+            <li>
+              <a href="#">Forums</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="legal">
+        <p>&copy; 2022 Todos los derechos reservados.</p>
+      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/admin.js" type="module"></script>
+  </body>
 </html>
