@@ -32,6 +32,7 @@
     ></script>
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="shortcut icon" href="../img/default-light.svg" />
+    <script src="https://kit.fontawesome.com/263ce776d3.js" crossorigin="anonymous"></script>
     <title>Xtore</title>
   </head>
   <body>
@@ -175,9 +176,9 @@
       </div>
       <div class="row">
         <div class="col-2">
-          <button class="btn btn-outline-primary my-2" id="btnCrearPelicula">
+          <button class="btn btn-outline-primary my-2" id="btnCrearProducto">
             Añadir producto
-            <i class="bi bi-clipboard2-plus-fill"></i>
+            <i class="fa-solid fa-circle-plus fa-beat" style="--fa-animation-duration: 5s;"></i>
           </button>
         </div>
         <div class="col-8">
@@ -194,65 +195,19 @@
                 <th>Acciones</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Domenic</td>
-                <td>88,110</td>
-                <td>dcode</td>
-                <td></td>
-                <td></td>
-                <td>
-                  <button class="btn btn-warning">
-                    <i class="bi bi-pencil-square"></i>
-                  </button>
-                  <button class="btn btn-danger">
-                    <i class="bi bi-x-square"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Sally</td>
-                <td>72,400</td>
-                <td>Students</td>
-                <td></td>
-                <td></td>
-                <td>
-                  <button class="btn btn-warning">
-                    <i class="bi bi-pencil-square"></i>
-                  </button>
-                  <button class="btn btn-danger">
-                    <i class="bi bi-x-square"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Nick</td>
-                <td>52,300</td>
-                <td>dcode</td>
-                <td></td>
-                <td></td>
-                <td>
-                  <button class="btn btn-warning">
-                    <i class="bi bi-pencil-square"></i>
-                  </button>
-                  <button class="btn btn-danger">
-                    <i class="bi bi-x-square"></i>
-                  </button>
-                </td>
-              </tr>
+            <tbody  id="tablaProductos">
             </tbody>
           </table>
         </div>
-        <div class="col-2"></div>
+        <div class="col-2">
+          <h2 class="display-6">Usuarios</h2>
+        </div>
       </div>
     </main>
     <!-- Modal para administrar series -->
     <div
       class="modal fade"
-      id="modalPelicula"
+      id="modalProducto"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -261,7 +216,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
-              Administrar Serie
+              Administrar Producto
             </h5>
             <button
               type="button"
@@ -271,7 +226,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form id="formPelicula">
+            <form id="formProducto">
               <div class="mb-3">
                 <label for="codigo">Codigo</label>
                 <input
@@ -290,7 +245,7 @@
                   id="nombre"
                   type="text"
                   class="form-control"
-                  placeholder="Ej: Robotech"
+                  placeholder="Ej: Iphone 11"
                   maxlength="60"
                   minlength="2"
                 />
@@ -323,10 +278,9 @@
                   id="precio"
                   type="number"
                   class="form-control"
-                  placeholder="123"
+                  placeholder="500"
                   maxlength="5"
                   minlength="1"
-                  disabled
                 />
               </div>
               <div class="mb-3">
@@ -335,10 +289,9 @@
                   id="cantidad"
                   type="number"
                   class="form-control"
-                  placeholder="123"
+                  placeholder="30"
                   maxlength="5"
                   minlength="1"
-                  disabled
                 />
               </div>
               <div class="mb-3">
