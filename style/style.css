@@ -307,3 +307,32 @@
   color: #725AC1;
 }
 /* FIN DE CSS TABLA ADMIN */
+
+
+/* Pagina error*/
+
+.imgError{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  }
+  
+  @media all and (min-width: 768px) and (max-width: 991px){
+  
+    .imgError{
+      width: 70%;
+      margin-top: 20%;
+  
+    }
+  
+  }
+  
+  @media all and (max-width: 767px){
+    .imgError{
+      width: 80%;
+      margin-top: 10px;
+      
+      
+  
+    }
+  
+  }
