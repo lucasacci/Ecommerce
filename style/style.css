@@ -336,3 +336,17 @@
     }
   
   }
+
+  /*Pagina acerca nosotros*/
+  @import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+
+  .lema{
+    color: #000;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Combo', cursive;
+    }
+    
+    .articuloLema{
+    text-align: center;
+    }
