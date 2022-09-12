@@ -1,14 +1,98 @@
+Página de detalle: al seleccionar un producto, veremos una página con más detalles del mismo.
+El producto debe tener como mínimo las siguientes propiedades:
+○ Código único.
+○ Nombre
+○ precio
+○ Categoría
+○ Imagen (álbum o alguna imagen decorativa de la canción) cargada con url
+○ descripción
+○ cantidad en stock
+○ NOTA: Pueden agregar más propiedades si lo consideran necesario.
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- agregar las 3 etiquetas metas -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Series</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Series</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="administrador.html">Administrador</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container my-5">
+      <h1 class="display-4 text-center">Detalle del Producto</h1>
+      <hr />
+      <section id="seccionDetalle">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone14pro-202209?wid=340&hei=264&fmt=p-jpg&qlt=95&.v=1661782459247" alt="Iphone14" style="width:100%">
+        <img src="" class="img-fluid rounded-start" alt="Q color te gusta mas?">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Iphone14Pro</h5>
+                <p class="card-text">Agregar descripcion del producto</p>
+                <p class="card-text">Codigo Unico</p>
+                <p class="">Cantidad en stock</p>
+                <p class="card-text">'Lo quiero': <span class="badge rounded-pill bg-info">Pre-order</span></p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+          </div>
+      </section>
+    </main>
+    <footer class="bg-dark text-light py-4 text-center">
+      <p>&copy; Todos los derechos reservados</p>
+    </footer>
     <script
-      src="https://kit.fontawesome.com/5a53958b9a.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="shortcut icon" href="img/default-light.svg"> 
-    <title>Xtore</title>
+   
+  </body>
+</html>
+
