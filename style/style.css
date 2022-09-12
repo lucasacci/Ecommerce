@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+
 *, *:before, *:after {
     box-sizing: border-box;
   }
@@ -338,7 +340,7 @@
   }
 
   /*Pagina acerca nosotros*/
-  @import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+  
 
   .lema{
     color: #000;
