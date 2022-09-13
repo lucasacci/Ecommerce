@@ -1,3 +1,4 @@
+
 import { Producto } from "./classProducto.js";
 import { cantidadCaracteres, validarDescri, validarImagen, validarNumeros, validarPrecio} from './helpers.js'
 
@@ -132,7 +133,7 @@ window.borrarProducto = function (codigo) {
   //mostrar una pregunta al usuario
   Swal.fire({
     title: "Eliminar producto",
-    text: "Esta seguro de eliminar la producto, este proceso no se puede revertir",
+    text: "Esta seguro de eliminar el producto, este proceso no se puede revertir",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
@@ -155,7 +156,7 @@ window.borrarProducto = function (codigo) {
       // mostrar mensaje de operacion correcta
       Swal.fire(
         "Producto eliminado",
-        "La Producto seleccionado fue correctamente eliminada",
+        "El Producto seleccionado fue correctamente eliminado",
         "success"
       );
     }
