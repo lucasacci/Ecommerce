@@ -32,6 +32,9 @@
     text-align: center;
   }
 
+  p{
+    color: whitesmoke;
+  }
 
   .botonIngresar{
     text-decoration: none;
@@ -43,14 +46,6 @@
 
   #register:hover{
     text-decoration: underline;
-  }
-
-  .bitter{
-    font-family: 'Bitter-Bold';
-  }
-
-  div div p{
-    color: whitesmoke;
   }
   
   .button{
@@ -313,16 +308,11 @@
 }
 /* FIN DE CSS TABLA ADMIN */
 
-/* css card */
+/* card css */
 
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
-body{
-  font-family: 'Muli', sans-serif;
-  background:#ddd;
-}
-.shell{
-  padding:80px 0;
-}
+
+
 .wsk-cp-product{
   background:#fff;
   padding:15px;
