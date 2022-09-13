@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+
 *, *:before, *:after {
     box-sizing: border-box;
   }
@@ -198,6 +200,11 @@
       flex: 2 0px;
     }
   }
+  @media screen and (min-width: 100px) {
+    .glow-on-hover {
+      margin-left: 45px;
+    }
+  }
 
 
   @media screen and (min-width: 360px) and (max-width: 600px){
@@ -334,6 +341,35 @@
     }
   
   }
+
+
+   /* Fin pagina error 404*/
+
+
+
+  /*Pagina acerca nosotros*/
+  
+
+  .lema{
+    color: #242038;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Combo', cursive;
+    }
+    
+    .articuloLema{
+    text-align: center;
+    }
+
+
+.colorNombres{
+  color: #242038;
+  font-weight: bold;
+
+}
+
+    /* Fin pagina acerca nosotros*/
+
 /* card css */
 
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
@@ -479,8 +515,8 @@ a.buy-btn{
   transition: all 0.2s ease-in-out;
 }
 a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
-  border-color: #FF9800;
-  background: #FF9800;
+  border-color: #725AC1;
+  background: #725AC1;
   color: #fff;
   text-decoration:none;
 }
@@ -490,8 +526,8 @@ a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
   text-align:center;
   font-size: 18px;
   transition: all 0.2s ease-in-out;
-  border-color: #FF9800;
-  background: #FF9800;
+  border-color: #725AC1;
+  background: #725AC1;
   padding:12px 30px;
   border-radius:27px;
   margin: 0 5px;
@@ -525,8 +561,8 @@ a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
   margin-top: 0px;
 }
 a.buy-btn{
-  border-color: #FF9800;
-  background: #FF9800;
+  border-color: #fff;
+  background: #CAC4CE;
   color: #fff;
 }
 }

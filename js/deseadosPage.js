@@ -1,24 +1,26 @@
 
+let deseados = JSON.parse(localStorage.getItem('listaDeseadosKey')) || [];
 
-let list = JSON.parse(localStorage.getItem('listaProductosKey')) || [];
+
+
+
 let padre = document.querySelector("#seccionPadre");
-let deseados = [];
-
-let buscador = document.querySelector('#buscador');
-
-// buscador.addEventListener('onchange');
 
 
-if(list.length > 0){
 
-    list.map((el)=>{
-     crearColumna(el);
-    })
+if(deseados.length > 0){
+
+   deseados.map((el)=>{
+    console.log(el)
+    crearColumna(el)
+   })
 
 }else{
     // mostrar mensaje si no hay productos cargados
     padre.innerHTML = ' <h1 class="text-center">No hay productos cargados</h1>'
 }
+
+
 
 function crearColumna(el){
 
@@ -39,33 +41,9 @@ function crearColumna(el){
                       <div class="card-footer">
                         <div class="wcf-left"><span class="price">$${el.precio}</span></div>
                         <div class="wcf-right"><a href="#" class="buy-btn" onclick="verDetalle('${el.codigo}')"><i class="fa-solid fa-info"></i></a></div>
-                        <div class="wcf-right mx-2"><a href="#" class="buy-btn" onclick="guardarDeseado('${el.codigo}')"><i class="fa-regular fa-heart"></i></a></div>
+                        <div class="wcf-right mx-2"><a href="#" class="buy-btn" onclick="guardarDeseado()"><i class="fa-regular fa-heart"></i></a></div>
                       </div>
                     </div>
                   </div>`;
 
 }
-
-function verDetalle (codigo){
-
-  console.log(window.location.origin+'/pag/detalle.html?codigo='+codigo);
-  window.location.href = window.location.origin+'/pag/detalle.html?codigo='+codigo;
-
-}
-
-
-// card
-
-
-  function guardarDeseado(codigo){
-    
-   
-    let aux = list.find(
-      (el) => el.codigo === codigo
-    );
-
-    deseados.push(aux);
-
-
-    localStorage.setItem("listaDeseadosKey", JSON.stringify(deseados));
-  }
