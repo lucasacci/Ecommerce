@@ -77,7 +77,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Acerca de</a>
+                  <a class="nav-link" href="acerca.html">Acerca de</a>
                 </li>
               </ul>
             </div>
@@ -172,7 +172,7 @@
     </header>
     <main class="container my-5">
       <div>
-        <h1 class="text-center display-4">ADMINISTRACIÓN</h1>
+        <h1 class="text-center display-4 mt-2">ADMINISTRACIÓN</h1>
         <hr />
       </div>
       <div class="row">
@@ -183,7 +183,7 @@
           </button>
         </div>
         <div class="col-12 col-sm-8">
-          <h2 class="display-6">Lista de productos</h2>
+          <h2 class="display-6 mt-2">Lista de productos</h2>
           <div class="table-responsive">
             <table class="content-table ">
              <thead>
@@ -261,7 +261,7 @@
                   class="form-control"
                   placeholder="Ej: Lorem ipsum dolor sit amet."
                   maxlength="200"
-                  minlength="2"
+                  minlength="5"
                 ></textarea>
               </div>
               <div class="mb-3">
@@ -271,8 +271,6 @@
                   type="text"
                   class="form-control"
                   placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html"
-                  maxlength="120"
-                  minlength="2"
                 />
               </div>
               <div class="mb-3">
@@ -285,6 +283,7 @@
                   maxlength="5"
                   minlength="1"
                 />
+                <div class="invalid-feedback">Ingrese un precio menor a 10000</div>
               </div>
               <div class="mb-3">
                 <label for="cantidad">Cantidad</label>
@@ -296,17 +295,15 @@
                   maxlength="5"
                   minlength="1"
                 />
+                <div class="invalid-feedback">Ingrese una cantidad menor a 1000</div>
               </div>
               <div class="mb-3">
-                <label for="categoria">Categoria</label>
-                <input
-                  id="categoria"
-                  type="text"
-                  class="form-control"
-                  placeholder="Ej: Robotech"
-                  maxlength="60"
-                  minlength="2"
-                />
+                <select class="form-select" id="categoria">
+                  <option selected>Seleccione la categoria</option>
+                  <option value="1">Celular</option>
+                  <option value="2">Tablet</option>
+                  <option value="3">Accesorios</option>
+                </select>
               </div>
               <button class="btn btn-primary" type="submit">Enviar</button>
             </form>
@@ -338,15 +335,15 @@
 
           <ul class="nav__ul">
             <li>
-              <a href="#">Join Now</a>
+              <a href="error404.html">Join Now</a>
             </li>
 
             <li>
-              <a href="#">Learn More</a>
+              <a href="error404.html">Learn More</a>
             </li>
 
             <li>
-              <a href="#">Manage Account</a>
+              <a href="error404.html">Manage Account</a>
             </li>
           </ul>
         </li>
@@ -356,19 +353,19 @@
 
           <ul class="nav__ul">
             <li>
-              <a href="#">Press Releases</a>
+              <a href="error404.html">Press Releases</a>
             </li>
 
             <li>
-              <a href="#">About Our Products</a>
+              <a href="error404.html">About Our Products</a>
             </li>
 
             <li>
-              <a href="#">Product Support</a>
+              <a href="error404.html">Product Support</a>
             </li>
 
             <li>
-              <a href="#">Product Manuals</a>
+              <a href="error404.html">Product Manuals</a>
             </li>
           </ul>
         </li>
@@ -378,15 +375,15 @@
 
           <ul class="nav__ul">
             <li>
-              <a href="#">FAQ</a>
+              <a href="error404.html">FAQ</a>
             </li>
 
             <li>
-              <a href="#">Help Desk</a>
+              <a href="error404.html">Help Desk</a>
             </li>
 
             <li>
-              <a href="#">Forums</a>
+              <a href="error404.html">Forums</a>
             </li>
           </ul>
         </li>
