@@ -114,3 +114,5 @@ function limpiarFormulario() {
 function guardarProductosEnLocalStorage() {
   localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos));
 }
+
+
