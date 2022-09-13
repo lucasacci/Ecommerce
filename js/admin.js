@@ -1,3 +1,4 @@
+
 import { Producto } from "./classProducto.js";
 
 //variable donde guardo los productos
@@ -52,7 +53,7 @@ function crearFila(producto) {
         <button class="btn btn-warning" onclick='editarproducto("${producto.codigo}")' >
           <i class="bi bi-pencil-square"></i>
         </button>
-        <button class="btn btn-danger" onclick='borrarproducto("${producto.codigo}")'>
+        <button class="btn btn-danger" onclick='borrarProducto("${producto.codigo}")'>
         <i class="fa-solid fa-trash"></i>
         </button>
       </td>
@@ -116,3 +117,44 @@ function guardarProductosEnLocalStorage() {
 }
 
 
+window.borrarProducto = function (codigo) {
+  //mostrar una pregunta al usuario
+  Swal.fire({
+    title: "Eliminar producto",
+    text: "Esta seguro de eliminar el producto, este proceso no se puede revertir",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Borrar",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    console.log(result);
+    if (result.isConfirmed) {
+      //aqui quiero borrar la pelicula
+      // console.log(codigo)
+      //buscar la pelicula en el arreglo y borrarla
+      let copiaListaProductos = listaProductos.filter(
+        (itemProducto) => itemProducto.codigo != codigo
+      );
+      listaProductos = copiaListaProductos;
+      //actualizar el localstorage
+      guardarProductosEnLocalStorage();
+      //actualizar la tabla
+      borrarTabla();
+      cargarInicial();
+
+      // mostrar mensaje de operacion correcta
+      Swal.fire(
+        "Producto eliminado",
+        "El Producto seleccionado fue correctamente eliminado",
+        "success"
+      );
+    }
+  });
+};
+
+function borrarTabla() {
+  let tablaProductos = document.querySelector("#tablaProductos");
+  tablaProductos.innerHTML = "";
+}
