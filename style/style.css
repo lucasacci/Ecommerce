@@ -508,3 +508,10 @@ a.buy-btn{
   color: #fff;
 }
 }
+footer {
+  display: grid;
+}
+
+footer p {
+  color: #999;
+}
