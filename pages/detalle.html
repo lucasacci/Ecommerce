@@ -1,0 +1,43 @@
+s//tomar el parametro de la url
+let parametro = window.location.search;
+console.log(parametro)
+
+let urlParametro = new URLSearchParams(parametro)
+console.log(urlParametro.get('codigo'))
+
+//buscar dentro del localstorage la pelicula que tiene el mismo codigo
+let  listaPeliculas = JSON.parse(localStorage.getItem('listaDetalleProductosKey')) || [];
+let ProductoBuscada= listaDetalleProductosKey.find((producto)=> producto.codigo === urlParametro.get('codigo'))
+console.log(peliBuscada);
+
+//dibujar la card con los datos del producto
+let seccionDetalle = document.querySelector('#seccionDetalle');
+seccionDetalle.innerHTML = `<div class="card mb-3">
+<div class="row g-0">
+  <div class="col-md-4">
+    <img src="${productoBuscada.imagen}" class="img-fluid rounded-start" alt="${productoBuscada.titulo}">
+  </div>
+  <div class="col-md-8">
+    <div class="card-body">
+      <h5 class="card-title">${productoBuscada.titulo}</h5>
+      <p class="card-text">${productoBuscada.descripcion}</p>
+      <p class="card-text">Genero: <span class="badge rounded-pill bg-info">${productoBuscada.genero}</span></p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+</div>`
+</section>
+</main>
+<footer cass="bg-dark text-light py-4 text-center">
+  <p>&copy; Todos los derechos reservados</p>
+</footer>
+<script>
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pprn3073KE6t16bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+  cross origin="anonymous"
+</script>
+<script src="../js/detalleproducto.js"></script>
+</body>
+</html>
+
