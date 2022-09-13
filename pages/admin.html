@@ -36,6 +36,7 @@
     <title>Xtore</title>
   </head>
   <body>
+    
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark color padding">
         <div class="container-fluid">
@@ -175,36 +176,38 @@
         <hr />
       </div>
       <div class="row">
-        <div class="col-2">
-          <button class="btn btn-outline-primary my-2" id="btnCrearProducto">
+        <div class="col-12 col-sm-2">
+          <button class="btn btn-outline-primary my-2" id="btnCrearProducto" style="--bs-btn-hover-bg: #725AC1; --bs-btn-border-color: #242038;--bs-btn-color:#242038">
             Añadir producto
             <i class="fa-solid fa-circle-plus fa-beat" style="--fa-animation-duration: 5s;"></i>
           </button>
         </div>
-        <div class="col-8">
+        <div class="col-12 col-sm-8">
           <h2 class="display-6">Lista de productos</h2>
-          <table class="content-table">
-            <thead>
-              <tr>
-                <th>Código</th>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Categoria</th>
-                <th>Descripción</th>
-                <th>Cantidad en Stock</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-            <tbody  id="tablaProductos">
-            </tbody>
-          </table>
+          <div class="table-responsive">
+            <table class="content-table ">
+             <thead>
+               <tr>
+                 <th>Código</th>
+                 <th>Nombre</th>
+                 <th>Precio</th>
+                 <th>Categoria</th>
+                 <th>Descripción</th>
+                 <th>Cantidad en Stock</th>
+                 <th>Acciones</th>
+               </tr>
+             </thead>
+             <tbody  id="tablaProductos">
+             </tbody>
+           </table> 
+          </div>
         </div>
-        <div class="col-2">
+        <div class="col-12 col-sm-2">
           <h2 class="display-6">Usuarios</h2>
         </div>
       </div>
     </main>
-    <!-- Modal para administrar series -->
+    <!-- Modal para administrar productos -->
     <div
       class="modal fade"
       id="modalProducto"

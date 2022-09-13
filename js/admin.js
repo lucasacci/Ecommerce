@@ -40,6 +40,7 @@ function cargarInicial() {
 
 function crearFila(producto) {
   //esta funcion dibuja un tr
+  console.log(producto.precio)
   let tablaProductos = document.querySelector("#tablaProductos");
   tablaProductos.innerHTML += `<tr>
       <th scope="row">${producto.codigo}</th>
@@ -87,11 +88,11 @@ function generarProductoNuevo() {
   let nuevoProducto = new Producto(
     codigo.value,
     nombre.value,
-    descripcion.value,
-    imagen.value,
     precio.value,
-    cantidad.value,
-    categoria.value
+    categoria.value,
+    imagen.value,
+    descripcion.value,
+    cantidad.value
   );
   console.log(nuevoProducto);
   listaProductos.push(nuevoProducto);
@@ -114,3 +115,5 @@ function limpiarFormulario() {
 function guardarProductosEnLocalStorage() {
   localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos));
 }
+
+
