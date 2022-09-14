@@ -11,11 +11,11 @@ let codigo = document.querySelector("#codigo");
 let nombre = document.querySelector("#nombre");
 let descripcion = document.querySelector("#descripcion");
 let imagen = document.querySelector("#imagen");
-let categoria = document.querySelector("#categoria");
 let precio = document.querySelector("#precio");
 let cantidad = document.querySelector("#cantidad");
 let formProducto = document.querySelector("#formProducto");
 let btnCrearProducto = document.querySelector("#btnCrearProducto");
+let categoria = document.getElementById('categoria');
 
 // crear una instancia de la ventana modal
 const modalAdminProducto = new bootstrap.Modal(
@@ -99,15 +99,18 @@ function guardarProducto(e) {
 
 function generarProductoNuevo() {
   //si los datos son correctos
+  
+
   let nuevoProducto = new Producto(
     codigo.value,
     nombre.value,
     precio.value,
-    categoria.value,
+    categoria.options[categoria.selectedIndex].text,
     imagen.value,
     descripcion.value,
     cantidad.value
   );
+  console.log(categoria.options[categoria.selectedIndex])
   console.log(nuevoProducto);
   listaProductos.push(nuevoProducto);
   //guardar el arreglo en localstorage
@@ -181,7 +184,6 @@ window.editarProducto = function (codigoBuscado) {
   codigo.value = productoBuscada.codigo;
   nombre.value = productoBuscada.nombre;
   precio.value = productoBuscada.precio;
-  categoria.value = productoBuscada.categoria;
   imagen.value = productoBuscada.imagen;
   descripcion.value = productoBuscada.descripcion;
   cantidad.value = productoBuscada.cantidad;
@@ -197,7 +199,7 @@ function actualizarProducto() {
   listaProductos[posicionProductoBuscada].precio = precio.value;
   listaProductos[posicionProductoBuscada].descripcion = descripcion.value;
   listaProductos[posicionProductoBuscada].imagen = imagen.value;
-  listaProductos[posicionProductoBuscada].categoria = categoria.value;
+  listaProductos[posicionProductoBuscada].categoria = categoria.options[categoria.selectedIndex].text;
   listaProductos[posicionProductoBuscada].cantidad = cantidad.value;
   
   //actualizar el localstorage
