@@ -6,6 +6,8 @@ let deseados = JSON.parse(localStorage.getItem('listaDeseadosKey')) || [];
 
 let padre = document.querySelector("#seccionPadre");
 
+
+
 function cargaInicial(){
 
     
@@ -28,6 +30,8 @@ cargaInicial();
 function crearColumna(el){
 
 
+
+  
     padre.innerHTML += `
     <div class="col-md-3" id="seccionPadre">
                   <div class="wsk-cp-product">
