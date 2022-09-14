@@ -62,6 +62,12 @@ function eliminarDeseado(codigo){
 
     borrarCard();
     cargaInicial();
+
+    Swal.fire(
+        'Producto eliminado',
+        'Eliminado con exito',
+        'success'
+      )
 }
 
 function borrarCard(){
