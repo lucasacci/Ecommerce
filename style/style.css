@@ -572,5 +572,8 @@ footer p {
   color: #999;
 }
 
-
+/*modal login*/
+#registrarme{
+  display: none;
+}
 
