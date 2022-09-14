@@ -6,21 +6,24 @@ let deseados = JSON.parse(localStorage.getItem('listaDeseadosKey')) || [];
 
 let padre = document.querySelector("#seccionPadre");
 
+function cargaInicial(){
 
+    
+    if(deseados.length > 0){
+    
+       deseados.map((el)=>{
+        console.log(el)
+        crearColumna(el)
+       })
+    
+    }else{
+        // mostrar mensaje si no hay productos cargados
+        padre.innerHTML = ' <h3 class="text-center">No hay productos deseados</h3>'
+    }
 
-if(deseados.length > 0){
-
-   deseados.map((el)=>{
-    console.log(el)
-    crearColumna(el)
-   })
-
-}else{
-    // mostrar mensaje si no hay productos cargados
-    padre.innerHTML = ' <h1 class="text-center">No hay productos cargados</h1>'
 }
 
-
+cargaInicial();
 
 function crearColumna(el){
 
@@ -40,10 +43,33 @@ function crearColumna(el){
                       </div>
                       <div class="card-footer">
                         <div class="wcf-left"><span class="price">$${el.precio}</span></div>
-                        <div class="wcf-right"><a href="#" class="buy-btn" onclick="verDetalle('${el.codigo}')"><i class="fa-solid fa-info"></i></a></div>
-                        <div class="wcf-right mx-2"><a href="#" class="buy-btn" onclick="guardarDeseado()"><i class="fa-regular fa-heart"></i></a></div>
+                        <div class="wcf-right"><a href="#" class="buy-btn" onclick="eliminarDeseado('${el.codigo}')"><i class="fa-solid fa-heart-crack"></i></a></div>
                       </div>
                     </div>
                   </div>`;
 
+}
+
+function eliminarDeseado(codigo){
+
+    console.log(codigo)
+
+    let listaCopia = deseados.filter((el) => el.codigo != codigo);
+
+    deseados = listaCopia;
+
+    localStorage.setItem('listaDeseadosKey', JSON.stringify(listaCopia));
+
+    borrarCard();
+    cargaInicial();
+
+    Swal.fire(
+        'Producto eliminado',
+        'Eliminado con exito',
+        'success'
+      )
+}
+
+function borrarCard(){
+    padre.innerHTML = "";
 }
