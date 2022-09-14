@@ -68,4 +68,10 @@ function verDetalle (codigo){
 
 
     localStorage.setItem("listaDeseadosKey", JSON.stringify(deseados));
+
+    Swal.fire(
+      'Producto agregado',
+      'Agregado a lista de deseos!',
+      'success'
+    )
   }
