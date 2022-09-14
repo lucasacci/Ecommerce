@@ -17,7 +17,7 @@ if(list.length > 0){
 
 }else{
     // mostrar mensaje si no hay productos cargados
-    padre.innerHTML = ' <h1 class="text-center">No hay productos cargados</h1>'
+    padre.innerHTML = ' <h3 class="text-center">No hay productos cargados</h3>'
 }
 
 function crearColumna(el){
