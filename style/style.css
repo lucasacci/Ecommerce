@@ -575,3 +575,7 @@ footer p {
 
 
 
+.cardXD{
+  height: 400px;
+  object-fit: cover;
+}

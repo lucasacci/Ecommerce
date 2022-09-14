@@ -25,7 +25,7 @@ function crearColumna(el){
 
     padre.innerHTML += `
     <div class="col-md-3" id="seccionPadre">
-                  <div class="wsk-cp-product">
+                  <div class="wsk-cp-product ">
                     <div class="wsk-cp-img">
                       <img src="${el.imagen}" alt="Product" class="img-responsive" />
                     </div>
