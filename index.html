@@ -91,7 +91,7 @@
       >
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header bg-dark">
+            <div class="modal-header bg-dark" id="iniciar">
               <h3 class="modal-title text-primary" id="modalMedialunaLabel">
                 <strong>LOGIN</strong>
               </h3>
@@ -102,7 +102,7 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body bg-dark" id="iniciar">
+            <div class="modal-body bg-dark" >
               <p class="fs-4 text-center text-light">Iniciar sesion</p>
               <form id="formInicio">
                 <div class="mb-3">
@@ -141,13 +141,73 @@
                     id="iniciarsesion"
                     type="submit"
                   >
-                    Iniciar
+                  Iniciar
                   </button>
                 </div>
-                <a onclick="registrarme()"
-                  ><label class="text-light">Registrarme</label></a
-                >
+                <a onclick="registrarme()"><label class="text-light">Registrarme</label></a>
+                  <div class="modal-body bg-dark" id="registrarme" >
+                    <p class="fs-4 text-center text-light">Crear cuenta</p>
+                <div class="mb-3">
+                  <label for="usuario" class="form-label text-light"
+                    >Usuario</label
+                  >
+                  <input
+                    type="text"
+                    name="nombreApellido"
+                    id="usuario"
+                    placeholder="Ingrese su usuario"
+                    class="form-control bg-secondary"
+                    autocomplete="off"
+                    minlength="3"
+                    maxlength="20"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="usuario" class="form-label text-light"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    name="Correo"
+                    id="usuario"
+                    placeholder="Correo electrónico"
+                    class="form-control bg-secondary"
+                    autocomplete="off"
+                    minlength="3"
+                    maxlength="20"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="usuario" class="form-label text-light"
+                    >Contraseña</label
+                  >
+                  <input
+                    type="password"
+                    name="contraseña"
+                    id="contraseña"
+                    placeholder="Ingrese su contraseña"
+                    class="form-control bg-secondary"
+                    autocomplete="off"
+                    minlength="3"
+                    maxlength="20"
+                  />
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button
+                    class="btn btn-primary"
+                    value="iniciar"
+                    id="registarusuario"
+                    type="submit"
+                  >
+                    Crear cuenta
+                  </button>
+                </div>
+                <a onclick="iniciar()"><label class="text-light">Iniciar sesion</label></a>
+                </div>
+              
               </form>
+              </div>
+              </div>
             </div>
           </div>
         </div>
@@ -281,6 +341,7 @@
       <script src="js/mainPage.js"></script>
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script src="js/login.js"></script>
+      <script src="js/displaylogin.js"></script>
 </body>
 </html>
 

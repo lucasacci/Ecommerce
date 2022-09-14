@@ -569,7 +569,10 @@ footer p {
   color: #999;
 }
 
-
+/*modal login*/
+#registrarme{
+  display: none;
+}
 
 .cardXD{
   height: 400px;
