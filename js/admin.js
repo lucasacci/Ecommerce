@@ -36,7 +36,7 @@ descripcion.addEventListener("blur", () =>{validarDescri(descripcion)})
 cargarInicial();
 
 function cargarInicial() {
-  console.log(listaProductos)
+
   if (listaProductos.length > 0) {
     //dibujar las filas de la tabla
     listaProductos.forEach((itemProducto) => {
@@ -68,6 +68,7 @@ function crearFila(producto) {
 }
 
 function crearProducto() {
+  limpiarFormulario();
   //volver asignar a la variable booleana el valor true
   productoNuevo = true;
   //limpiar el formulario
@@ -112,11 +113,11 @@ function generarProductoNuevo() {
     cantidad.value
   );
 
+  limpiarFormulario();
   listaProductos.push(nuevoProducto);
   //guardar el arreglo en localstorage
   guardarProductosEnLocalStorage();
   //limpiar formulario
-  limpiarFormulario();
   //dibujar la fila en la tabla
   crearFila(nuevoProducto);
   //cerrar la ventana modal
