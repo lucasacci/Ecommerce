@@ -125,6 +125,12 @@ function generarProductoNuevo() {
 
 function limpiarFormulario() {
   formProducto.reset();
+  codigo.className = 'form-control';
+  nombre.className = 'form-control';
+  descripcion.className = 'form-control';
+  imagen.className = 'form-control';
+  precio.className = 'form-control';
+  cantidad.className = 'form-control';
 }
 
 function guardarProductosEnLocalStorage() {
@@ -187,6 +193,7 @@ window.editarProducto = function (codigoBuscado) {
   imagen.value = productoBuscada.imagen;
   descripcion.value = productoBuscada.descripcion;
   cantidad.value = productoBuscada.cantidad;
+  categoria.value = productoBuscada.categoria;
 };
 
 function actualizarProducto() {
