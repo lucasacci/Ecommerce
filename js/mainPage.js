@@ -48,7 +48,7 @@ function crearColumna(el){
 
 function verDetalle (codigo){
 
-  console.log(window.location.origin+'/pages/detalle.html?codigo='+codigo);
+ 
   window.location.href = window.location.origin+'/pages/detalle.html?codigo='+codigo;
 
 }

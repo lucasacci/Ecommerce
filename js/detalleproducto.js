@@ -1,12 +1,12 @@
 let parametro = window.location.search
-console.log (parametro)
+
 
 let urlParametro =new URLSearchParams(parametro)
-console.log (urlParametro.get('codigo'))
+
 
 let listaProductos = JSON.parse(localStorage.getItem('listaProductosKey'))||[];
 let productoBuscada= listaProductos.find ((productos)=> productos.codigo === urlParametro.get('codigo'))
-console.log(productoBuscada);
+
 
 let seccionDetalle = document.querySelector('#seccionDetalle');
 seccionDetalle.innerHTML = `<div class="card mb-3">

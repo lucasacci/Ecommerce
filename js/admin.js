@@ -36,7 +36,7 @@ descripcion.addEventListener("blur", () =>{validarDescri(descripcion)})
 cargarInicial();
 
 function cargarInicial() {
-  console.log(listaProductos)
+
   if (listaProductos.length > 0) {
     //dibujar las filas de la tabla
     listaProductos.forEach((itemProducto) => {
@@ -47,7 +47,7 @@ function cargarInicial() {
 
 function crearFila(producto) {
   //esta funcion dibuja un tr
-  console.log(producto.precio)
+
   let tablaProductos = document.querySelector("#tablaProductos");
   tablaProductos.innerHTML += `<tr>
       <th scope="row">${producto.codigo}</th>
@@ -68,15 +68,16 @@ function crearFila(producto) {
 }
 
 function crearProducto() {
+  limpiarFormulario();
   //volver asignar a la variable booleana el valor true
   productoNuevo = true;
   //limpiar el formulario
-  limpiarFormulario();
   //mostrar ventana modal
   modalAdminProducto.show();
   //generar el identificador unico y asignarlo al campo del codigo
   codigo.value = uuidv4();
   // console.log( uuidv4()); esta libreria genera identificadores unicos
+  limpiarFormulario();
 }
 
 function guardarProducto(e) {
@@ -95,6 +96,7 @@ function guardarProducto(e) {
       text: 'Algo salio mal!',
     })
   }
+  limpiarFormulario();
 }
 
 function generarProductoNuevo() {
@@ -110,13 +112,12 @@ function generarProductoNuevo() {
     descripcion.value,
     cantidad.value
   );
-  console.log(categoria.options[categoria.selectedIndex])
-  console.log(nuevoProducto);
+
+  limpiarFormulario();
   listaProductos.push(nuevoProducto);
   //guardar el arreglo en localstorage
   guardarProductosEnLocalStorage();
   //limpiar formulario
-  limpiarFormulario();
   //dibujar la fila en la tabla
   crearFila(nuevoProducto);
   //cerrar la ventana modal
@@ -178,7 +179,7 @@ window.editarProducto = function (codigoBuscado) {
   let productoBuscada = listaProductos.find(
     (producto) => producto.codigo === codigoBuscado
   ); 
-  console.log(productoBuscada);
+
   //mostrar la ventana modal con el formulario cargado con todos los datos de la producto que selecciono el usuario
   modalAdminProducto.show();
   codigo.value = productoBuscada.codigo;
@@ -190,10 +191,10 @@ window.editarProducto = function (codigoBuscado) {
 };
 
 function actualizarProducto() {
-  console.log("actualizando producto...");
+
   //tomar todos los datos cargados del formulario, buscar el objeto que estoy mostrando en el formulario y actualizar sus valores
   let posicionProductoBuscada= listaProductos.findIndex((producto)=> codigo.value === producto.codigo )
-  console.log(posicionProductoBuscada);
+
   //modificar los valores dentro del arreglo
   listaProductos[posicionProductoBuscada].nombre = nombre.value;
   listaProductos[posicionProductoBuscada].precio = precio.value;

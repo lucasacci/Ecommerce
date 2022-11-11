@@ -22,6 +22,7 @@ export function validarNumeros (input){
 
 export function validarPrecio (input){
     
+
     let patron = /^[\d]{1,4}(\.[\d]{1,2})?$/;
     console.log(patron.test(input.value))
     if(patron.test(input.value)){
